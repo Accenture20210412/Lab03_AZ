@@ -1,5 +1,8 @@
 package dp.fm.product;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         BrowserAnalyzer browserAnalyzer = new BrowserAnalyzer();
@@ -14,6 +17,10 @@ public class Main {
 
         browserAnalyzer.addBrowserHandler(browserHandler1);
 
-        
+        List<String> urls = new ArrayList<>();
+        urls.add("google.com");
+        urls.add("google.pl");
+
+        System.out.println(browserAnalyzer.testBrowsers(urls));
     }
 }
